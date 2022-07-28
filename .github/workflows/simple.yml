@@ -19,6 +19,8 @@ jobs:
           print(platform.processor())
   run-windows-command:
     runs-on: windows-2022
+    needs:
+      - run-shell-command
     steps:
       - name: Directory Powershell
         run: Get-Location
